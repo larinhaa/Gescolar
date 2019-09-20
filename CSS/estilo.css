@@ -1,0 +1,13 @@
+*{padding:0; margin:0}
+
+body {font:16px "trebuchet MS"}
+
+label {display:block; padding:10px;}
+
+input {border:1px solid #000; background: #ccc; padding:10px; display: block; }
+
+button {cursor: pointer; border:2px solid darkred; background: red; color: #FFF; padding:10px; }
+
+fieldset {padding: 10px; margin: 0 auto; background: #eee; border:1px solod #ccc}
+
+legend {text-transform: uppercase; font-size: 18px; text-align: center;}
