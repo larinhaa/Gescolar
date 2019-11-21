@@ -16,14 +16,17 @@ if(isset($_REQUEST['cadastrar']))
         $stmt = $conexao->prepare($sql);
         $stmt ->bindparam(1, $_REQUEST['nome']);
         $stmt ->bindparam(2, $_REQUEST['data_nascimento']);
-        $stmt ->bindparam(2, $_REQUEST['sexo']);
-        $stmt ->bindparam(2, $_REQUEST['genero']);
-        $stmt ->bindparam(2, $_REQUEST['cpf']);
-        $stmt ->bindparam(2, $_REQUEST['cidade']);
-        $stmt ->bindparam(2, $_REQUEST['estado']);
-        $stmt ->bindparam(2, $_REQUEST['bairro']);
-        $stmt ->bindparam(2, $_REQUEST['rua']);
-        $stmt ->bindparam(2, $_REQUEST['cep']);
+        $stmt ->bindparam(3, $_REQUEST['sexo']);
+        $stmt ->bindparam(4, $_REQUEST['genero']);
+        $stmt ->bindparam(5, $_REQUEST['cpf']);
+        $stmt ->bindparam(6, $_REQUEST['cidade']);
+        $stmt ->bindparam(7, $_REQUEST['estado']);
+        $stmt ->bindparam(8, $_REQUEST['bairro']);
+        $stmt ->bindparam(9, $_REQUEST['rua']);
+        $stmt ->bindparam(10, $_REQUEST['cep']);
+        $stmt ->execute();
+
+        echo "aluno inserido com sucesso!" ;
 
     } catch(Exception $e) {
         echo $e->getmessage();
@@ -31,10 +34,14 @@ if(isset($_REQUEST['cadastrar']))
 }
 
 ?>
+<link href="css/estilo.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/validacao_cad_aluno.js"></script>
+<?php include_once 'includes/cabecalho.php' ?>
+
 <div>
 <fieldset>
       <legend> Cadastro de alunos </legend>
-         <form action ="cadastrar_alunos.php?cadastrar-true"> 
+         <form action ="cadastrar_alunos.php?cadastrar=true" method="post" pnsubmit="validar_cad_aluno()"> 
          <label> Nome: <input type="text" name="nome" required /> </label>
          <label> Cidade: <input type="text" name="cidade" required /> </label>
          <label> Cep: <input type="text" name="cep" required /> </label>

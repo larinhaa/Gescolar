@@ -11,3 +11,19 @@ button {cursor: pointer; border:2px solid darkred; background: red; color: #FFF;
 fieldset {padding: 10px; margin: 0 auto; background: #eee; border:1px solod #ccc}
 
 legend {text-transform: uppercase; font-size: 18px; text-align: center;}
+
+
+/*novo*/
+#menu-navegacao { width: 65%; margin: 0 auto;}
+#menu-navegacao li {display: inline-block; padding:10px;}
+#menu-navegacao li a {   padding:10px;}
+#menu-navegacao li a:hover { background: red; color: #fff }
+
+table {width: 60%; margin: 0 auto; backgound: #eee }
+
+
+/**
+ * coloque essa linha nos arquivos php para estilizar os formulários:
+   coloque na parte do html, fora do <?php?>
+  <link href="css/estilos.css" type="text/css" rel="stylesheet" />
+ */
